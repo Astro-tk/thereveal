@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +67,7 @@
   .nav-links{display:flex;gap:34px;align-items:center}
   .nav-links a{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--body);transition:color .2s}
   .nav-links a:hover{color:var(--rose)}
-  .nav .btn{padding:.85em 1.5em}
+  nav .btn{padding:.85em 1.5em}
   @media(max-width:840px){ .nav-links{display:none} }
 
   /* hero */
@@ -196,6 +197,71 @@
   @keyframes rise{to{opacity:1;transform:none}}
   @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
   .float{animation:floaty 7s ease-in-out infinite}
+  /* ---------- mobile polish ---------- */
+  @media(max-width:640px){
+    .wrap{padding:0 20px}
+    .label{letter-spacing:.2em}
+
+    /* nav */
+    nav .wrap{height:64px;gap:12px}
+    .brand .name{font-size:1.4rem}
+    .brand .co{font-size:.92rem}
+    .brand .the{font-size:.54rem;letter-spacing:.3em}
+    nav .btn{padding:.72em 1.05em;font-size:.66rem;letter-spacing:.12em}
+
+    /* hero */
+    .hero{padding:38px 0 54px}
+    .hero .wrap{gap:34px}
+    .hero-copy .label{font-size:.6rem;letter-spacing:.16em;margin-bottom:16px}
+    .hero-copy h1{font-size:clamp(2.4rem,10vw,3.3rem)}
+    .hero-copy .script{font-size:clamp(1.9rem,8vw,2.6rem)}
+    .hero-copy p{font-size:.95rem;margin:16px auto 26px}
+    .hero-ctas{flex-direction:column;gap:12px}
+    .hero-ctas .btn{width:100%;justify-content:center}
+    .hero-photo .reveal-frame{padding:12px}
+    .hero-photo .reveal-frame::after{inset:6px}
+    .hero-photo .reveal-frame img{max-height:420px}
+    .reveal-frame .cnr{width:22px;height:22px}
+    .reveal-frame .cnr.tl{top:-11px;left:-11px}
+    .reveal-frame .cnr.tr{top:-11px;right:-11px}
+    .reveal-frame .cnr.bl{bottom:-11px;left:-11px}
+    .reveal-frame .cnr.br{bottom:-11px;right:-11px}
+
+    /* section rhythm */
+    .pillars,.packages,.gallery,.booking{padding:62px 0}
+    .band{padding:66px 0}
+    .sec-head{margin-bottom:38px}
+    .sec-head h2{font-size:clamp(2rem,9vw,2.6rem)}
+
+    .pillar-grid{gap:38px 24px}
+    .pillar h3{font-size:1.35rem}
+    .band p,.book-intro p{font-size:.95rem}
+
+    .pkg{padding:34px 26px 30px}
+    .pkg h3{font-size:1.65rem}
+    .pkg-note{margin-bottom:40px}
+
+    /* gallery */
+    .gal-grid{grid-auto-rows:150px;gap:12px}
+    .gal-item .cap{font-size:.62rem;padding:10px 12px;letter-spacing:.16em}
+
+    /* booking */
+    .book-form{padding:30px 22px}
+    .book-form::after{inset:7px}
+    .book-intro h2{font-size:clamp(2rem,9vw,2.6rem)}
+
+    /* footer */
+    footer{padding:62px 0 36px}
+    footer .fmark .name{font-size:2.4rem}
+    footer .fscript{font-size:1.6rem}
+  }
+  @media(max-width:380px){
+    .hero-copy h1{font-size:2.1rem}
+    .brand .name{font-size:1.26rem}
+    nav .btn{padding:.62em .8em;letter-spacing:.08em}
+    .gal-grid{grid-auto-rows:132px}
+    .pkg{padding:30px 22px 26px}
+  }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}.rise{opacity:1;transform:none}}
 </style>
 </head>
